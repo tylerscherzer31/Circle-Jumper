@@ -31,8 +31,15 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Cyan")
+        if (collision.tag == "ColorChanger")
         {
+            SetRandomColor();
+            Destroy(collision.gameObject);
+            return;
+        }
+        if (collision.tag != currentColor)
+        {
+            Debug.Log("GAME OVER");
 
         }
 
@@ -40,7 +47,7 @@ public class Player : MonoBehaviour
 
     void SetRandomColor()
     {
-        int index = Random.Range(0, 3);
+        int index = Random.Range(0, 4);
             switch (index)
             {
             case 0:
