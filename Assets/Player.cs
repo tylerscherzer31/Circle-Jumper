@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer sr;
+   
 
     public Color colorCyan;
     public Color colorYellow;
@@ -53,6 +54,7 @@ public class Player : MonoBehaviour
             case 0:
                 currentColor = "Cyan";
                 sr.color = colorCyan;
+
                 break;
             case 1:
                 currentColor = "Yellow";
