@@ -1,0 +1,6 @@
+for this game i wanted to emulate a simlar game that is popular across the internet and on mobile devices. 
+the objective is to go through the circle at the point that it is that same color as the player (knob). the score increases
+every time you reach the next marker (colorChanger) which is represented by a clone of the player but in white and after the objective. 
+it is an infinite single level game that has the objective of getting the highest score. I had an issue trying to create a instanitatior loop
+that would continue to replicate the circles. insteade i manually recreated the circles and color changer objectives which would not be sustainable in the 
+long term.
