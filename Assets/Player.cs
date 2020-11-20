@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         {
             SetRandomColor();
             Destroy(collision.gameObject);
+            ScoreScript.scoreValue++;
             return;
         }
         if (collision.tag != currentColor)
@@ -49,13 +50,15 @@ public class Player : MonoBehaviour
 
     void SetRandomColor()
     {
+       
         int index = Random.Range(0, 4);
+        int y = index;
+
             switch (index)
             {
             case 0:
                 currentColor = "Cyan";
                 sr.color = colorCyan;
-
                 break;
             case 1:
                 currentColor = "Yellow";
@@ -70,5 +73,10 @@ public class Player : MonoBehaviour
                 sr.color = colorPink;
                 break;
             }
+        index = index - y;
+        if (y < 1)
+        {
+            index = Random.Range(0, 4);
+        }
     }
 }
