@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
         }
         if (collision.tag != currentColor)
         {
-            Debug.Log("GAME OVER");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
 
